@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0;
+}
+
+.menu ul{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content:space-around;
+    padding: 10px auto;
+    background-color: red;
+    color: white;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+}
