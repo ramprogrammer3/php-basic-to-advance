@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery mouse event</title>
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      #box {
+        background-color: pink;
+        border: 1px solid black;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h3>jquery mouse event here</h3>
+
+      <div id="box" class="text">
+        <h3>Text box</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+          quas adipisci esse magnam dolorem dolor neque numquam tempore nam et!
+        </p>
+      </div>
+    </div>
+    <script src="/js/jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#box").click(function () {
+          $("#box").css("background-color", "blue");
+        });
+
+        var a = $("#box").html();
+        console.log(a);
+
+        $("#box").dblclick(function () {
+          $("#box").css("background-color", "orange");
+        });
+
+        $("#box").contextmenu(function () {
+          $("#box").css("background-color", "green");
+        });
+
+        $("#box").mouseenter(function () {
+          $("#box").css("background-color", "tag");
+        });
+
+        $("#box").mouseleave(function () {
+          $("#box").css("background-color", "purple");
+        });
+      });
+    </script>
+  </body>
+</html>
