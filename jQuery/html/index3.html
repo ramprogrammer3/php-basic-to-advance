@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery keyboard event</title>
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <style>
+      #box {
+        background-color: pink;
+        border: 1px solid black;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h3>jquery keyboard event here</h3>
+      <div id="box">
+        <h3>Text box</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi nam
+          provident doloribus illo culpa sit libero debitis sint ducimus odio.
+        </p>
+      </div>
+    </div>
+
+    <script src="/js/jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("body").keypress(function () {
+          $(this).css("background-color", "orange");
+        });
+
+        $("body").keyup(function () {
+          $(this).css("background-color", "red");
+        });
+
+        $("body").keydown(function () {
+          $(this).css("background-color", "green");
+        });
+      });
+    </script>
+  </body>
+</html>
