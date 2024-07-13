@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>window event</title>
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <style>
+      #box {
+        width: 70%;
+        height: 200px;
+        background-color: pink;
+        padding: 10px;
+        border: 1px solid black;
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h3>jquery window events</h3>
+
+      <div id="box">
+        <h3>Text Box</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
+          soluta ipsa. Molestiae amet eligendi exercitationem error maiores odit
+          deserunt ad nulla quia dignissimos, debitis corrupti sed rem
+          voluptatum enim, voluptas dolorum impedit! Distinctio, voluptate velit
+          fugit qui hic, vel in sed accusantium dignissimos pariatur labore odio
+          laboriosam maxime assumenda recusandae minima ullam facilis et nobis
+          repellat ab culpa eaque. Explicabo quos voluptatem, quaerat
+          dignissimos a commodi soluta quisquam corrupti temporibus quas hic
+          tempore quasi veritatis deserunt. Minima, nihil error nam nostrum odit
+          architecto, facere officiis beatae aspernatur ipsam fugit ad, libero
+          quasi aut cumque laudantium omnis consequatur quos qui nemo. Nesciunt
+          pariatur libero, voluptas, soluta sapiente a debitis similique tempora
+          optio cum dolor. Tempore enim assumenda dolores, molestias nemo totam?
+        </p>
+      </div>
+
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, aliquid
+        expedita, debitis, obcaecati rem et veritatis libero dignissimos atque
+        quis ipsum aliquam enim! Accusamus saepe cum necessitatibus, officiis, a
+        quibusdam cumque dolor impedit non maxime fugit. Aperiam delectus, quo
+        vitae fugit ad, alias minus distinctio nihil eveniet libero quod placeat
+        magni dolorum et ullam debitis nemo perspiciatis quidem nam explicabo
+        enim? Consequatur quos fuga vero! Tenetur reprehenderit suscipit nobis
+        molestias magnam ab quibusdam, iusto, aliquam laboriosam impedit qui
+        consequuntur facilis error blanditiis totam. Doloremque, dolor dolores,
+        minus ea architecto voluptas atque debitis optio laboriosam sapiente
+        eveniet iste molestias blanditiis similique velit reiciendis nam,
+        eligendi labore impedit. Ipsum ducimus illo deleniti dolorum suscipit
+        error asperiores velit maxime voluptatum labore quos quaerat
+        consequuntur sapiente animi ab eligendi, obcaecati tempore similique
+        blanditiis! Dolorum, adipisci deleniti. Blanditiis non iure excepturi
+        exercitationem praesentium, consequuntur fugiat dolores accusantium
+        ipsum nostrum corrupti assumenda amet repellat quaerat architecto
+        deserunt cupiditate veritatis voluptate facilis. Deleniti sit recusandae
+        harum cupiditate voluptas similique possimus eum, porro alias et
+        eveniet, accusantium error dolorem non atque, laborum delectus totam
+        neque numquam sed facilis sapiente consequatur. Dolorum, eius beatae
+        fuga, corporis quaerat impedit magni fugiat pariatur quae ab, illo
+        nihil. Excepturi et harum officiis!
+      </p>
+    </div>
+    <script src="/js/jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          console.log("You are scrolling");
+        });
+
+        $("#box").scroll(function () {
+          console.log("scrolling");
+        });
+
+        $(window).resize(function () {
+          console.log("You are resizing the widows");
+        });
+      });
+    </script>
+  </body>
+</html>
