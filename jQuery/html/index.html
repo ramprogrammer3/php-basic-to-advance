@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQuery tutorial 1</title>
+    <link rel="stylesheet" href="/bootstrap.css" />
+    <script src="/jquery.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h3>JQuery implementation</h3>
+      <div class="row my-5">
+        <div class="col-md-3 text-bg-info mx-5" id="text1">
+          <h3>Text box 1</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde
+            incidunt alias inventore cupiditate id corporis magni earum non
+            voluptas a eveniet quibusdam est tenetur, cum nisi. Unde sit saepe
+            
+          </p>
+        </div>
+        <div class="col-md-3 bg-dark text-white" id="text2">
+          <h3>Text box 2</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque
+            ipsum inventore accusantium eius fugit fuga aliquam, sed quibusdam
+            facilis delectus deleniti dolor architecto? Vero fugiat aliquam quo
+            
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            console.log("ram kumar")
+            var getHtml = $('#text1').html();
+            console.log(getHtml);
+
+
+            var getHtml1 = $("#text2").html();
+            console.log(getHtml1);
+        })
+    </script>
+  </body>
+</html>
