@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery class method</title>
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <style>
+      .first {
+        background: tan;
+      }
+      .second {
+        background: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>jquery add,remove and toggle class</h2>
+      <div id="box" class="border border-black p-3">
+        <h2>Test Box</h2>
+        <p>
+          Lorem ipsum dolor sit.
+          <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</span>
+        </p>
+      </div>
+      <br />
+      <button id="add" class="btn btn-outline-dark">Add</button>
+      <button id="remove" class="btn btn-outline-dark">Remove</button>
+      <button id="toggle" class="btn btn-outline-dark">Toggle</button>
+    </div>
+
+    <script src="/js/jquery.js"></script>
+    <script>
+      $(document).ready(() => {
+        $("#add").click(() => {
+          $("#box").addClass("first");
+        });
+
+        $("#remove").click(() => {
+          $("#box").removeClass("first");
+        });
+
+        $("#toggle").click(() => {
+          $("#box").toggleClass("first");
+        });
+      });
+    </script>
+  </body>
+</html>
