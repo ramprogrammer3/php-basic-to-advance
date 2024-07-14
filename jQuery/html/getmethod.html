@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery get method</title>
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <style>
+      #box {
+        background-color: pink;
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h3>jquery get method here</h3>
+      <div id="box" class="test abc">
+        <h3>Text Box</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam,
+          architecto? <span>this is span</span>
+        </p>
+      </div>
+    </div>
+
+    <script src="/js/jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        var a = $("#box").html();
+        console.log(a);
+
+        var a = $("#box p").html();
+        console.log(a);
+
+        var a = $("#box p").text();
+        console.log(a);
+
+        var b = $("#box").attr("class");
+        console.log(b);
+      });
+    </script>
+  </body>
+</html>
