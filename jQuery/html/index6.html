@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery css method </title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <style>
+        #box{
+            border: 1px solid black;
+            padding: 10px;
+        }
+        .btn{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>jquery css method </h2>
+        <div id="box">
+            <h2>Test Box</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, cum!</p>
+        </div>
+        <button id="stylebutton" type="button" class="btn btn-outline-dark">Add Style </button>
+    </div>
+    <script src="/js/jquery.js"></script>
+    <script>
+        $(document).ready(()=>{
+
+            $('#stylebutton').click(()=>{
+                // $("#box").css("background","pink");
+                $("#box").css({
+                    "background":"pink",
+                    "color" : "red",
+                    "border" : "5px solid lime",
+                });
+            });
+
+        });
+    </script>
+</body>
+</html>
