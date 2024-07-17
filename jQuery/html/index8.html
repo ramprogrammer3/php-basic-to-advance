@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery append and prepend method</title>
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <style>
+      #box {
+        padding: 10px;
+        border: 1px solid slateblue;
+        background-color: lightgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>jquery append and prepend method</h2>
+      <div id="box">
+        <h3>Test box</h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, iure?
+          Quos quae maxime non qui.
+        </p>
+      </div>
+      <br /><br />
+      <button id="appendbtn" class="btn border border-2">Append</button>
+      <button id="prependbtn" class="btn border border-2">Prepend</button>
+    </div>
+
+    <script src="/js/jquery.js"></script>
+    <script>
+      $(document).ready(() => {
+        $("#appendbtn").click(() => {
+          $("#box").append("<h1>Appended heading</h1>");
+        });
+
+        $("#prependbtn").click(() => {
+          $("#box").prepend("<h4>prepended heading</h4>");
+        });
+      });
+    </script>
+  </body>
+</html>
