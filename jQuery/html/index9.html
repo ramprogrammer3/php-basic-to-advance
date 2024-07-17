@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery after and befor method</title>
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <style>
+      #box {
+        padding: 10px;
+        border: 1px solid steelblue;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h3>jquery after and before method</h3>
+      <br />
+      <div id="box">
+        <h3>Test Box</h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero
+          corporis inventore quasi similique, ea ab?
+        </p>
+      </div>
+      <br /><br />
+      <button id="after" class="btn btn-dark">After</button>
+      <button id="before" class="btn btn-dark">Before</button>
+    </div>
+
+    <script src="/js/jquery.js"></script>
+    <script>
+      $(document).ready(() => {
+        $("#after").click(() => {
+          $("#box").after("<h3> after </h3>");
+        });
+
+        $("#before").click(() => {
+          $("#box").before("<h3>Before</h3>");
+        });
+      });
+    </script>
+  </body>
+</html>
