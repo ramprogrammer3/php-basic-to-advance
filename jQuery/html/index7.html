@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery on & off method</title>
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <style>
+      #box {
+        padding: 10px;
+        border: 1px solid black;
+      }
+
+      .boxbg {
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>jquery on & off method</h2>
+
+      <div id="box">
+        <h3>Test Box</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+          veritatis architecto cumque, labore recusandae sint?
+        </p>
+      </div>
+      <br><br>
+      <button>Remove event</button>
+    </div>
+
+    <script src="/js/jquery.js"></script>
+    <script>
+      $(document).ready(() => {
+        // $("#box").on("mouseover mouseout",function(){
+        //     $(this).toggleClass("boxbg");
+        // });
+
+        $("#box").on({
+          click: function () {
+            $(this).css("background", "orange");
+          },
+          mouseover: function () {
+            $(this).css("background", "pink");
+          },
+
+          mouseout: function () {
+            $(this).css("background", "lime");
+          },
+        });
+
+        $("button").click(function(){
+            $("#box").off("mouseout mouseover");
+        })
+
+      });
+    </script>
+  </body>
+</html>
