@@ -1,11 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AppendTo & prependTo</title>
-</head>
-<body>
+    <style>
+      #box {
+        border: 1px solid slateblue;
+        padding: 10px;
+        background: lightgreen;
+      }
+    </style>
+  </head>
+  <body>
     <h1>jquery Append to prependTo</h1>
-</body>
+    <div id="box">
+      <h2>Test Box</h2>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem
+        soluta nulla officia repudiandae eum nesciunt!
+      </p>
+    </div>
+    <br /><br />
+    <button id="append">Append To</button>
+    <button id="prepend">PrependTo</button>
+
+    <script src="/js/jquery.js"></script>
+    <script>
+      $(document).ready(() => {
+        $("#append").click(() => {
+          $("<p>Appended</p>").appendTo("#box");
+        });
+
+        $("#prepend").click(() => {
+          $("<p>Prepended</p>").prependTo("#box");
+        });
+      });
+    </script>
+  </body>
 </html>
