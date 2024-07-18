@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery replaceWith and All ()</title>
+    <style>
+      #box {
+        background-color: green;
+        color: white;
+        border: 1px solid black;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>jquery ReplaceWith and ReplaceAll method</h1>
+    <br />
+    <div id="box">
+      <h2>Test Box</h2>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab,
+        reiciendis?
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui facilis
+        sunt quaerat commodi quos suscipit?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, dolores
+        quia est dolor praesentium esse exercitationem.
+      </p>
+    </div>
+    <br />
+    <button id="btn">Replace</button>
+    <script src="/js/jquery.js"></script>
+    <script>
+      $(document).ready(() => {
+        // $("#btn").click(()=>{
+        //     $("#box p:first").replaceWith("<h3>Ram kumar maniyari</h3>")
+        // });
+
+        $("#btn").click(() => {
+          $("#box p:nth-child(4)").replaceWith("<h3>Ram kumar maniyari</h3>");
+        });
+
+        
+      });
+    </script>
+  </body>
+</html>
