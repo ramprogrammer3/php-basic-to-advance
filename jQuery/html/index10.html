@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery remove and empty method</title>
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <style>
+      #box {
+        padding: 10px;
+        border: 1px solid slateblue;
+        background: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h3>jquery remove and empty method</h3>
+      <br />
+      <div id="box">
+        <h3>Test box</h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident
+          odit consequatur non nihil quidem iusto?
+        </p>
+      </div>
+      <br />
+      <button id="empty">Empty</button>
+      <button id="remove">Remove</button>
+    </div>
+    <script src="/js/jquery.js"></script>
+    <script>
+      $(document).ready(() => {
+        $("#empty").click(() => {
+          $("#box").empty();
+        });
+
+        $("#remove").click(() => {
+          $("#box h3").remove();
+        });
+      });
+    </script>
+  </body>
+</html>
